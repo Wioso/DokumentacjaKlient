@@ -1,3 +1,17 @@
 WIOSO KLIENT
 
-ADAM MA MAŁEGO
+///////
+SZLAKI:
+
+Po wejsciu w ekran z ekranu home pobierane są wszystkie szlaki dla wszystkich klientów funkcja KayakRenters/GetAllSupportedRoutes. 
+Jeżeli wejście w ekran nastąpiło z ekranu dostawców pobierane są szlaki dla danego dostawcy KayakRenters/GetAllSupportedRoutesRenter?renterID=.
+Po poprawnym załadowaniu wszystkich danych tworzona jest lista wszystkich rzek występujących w pobranych szlakach, lista ta jest używana w comobox do filtrowania szlaków po wybranej rzece.
+Dla każdego pobranego szlaku ładowane są opinie OpinionsForTrail/GetOpinionsForTrail?StartPointId=1&StopPointId=1, oraz ładowane są zdjęcia Photos/GetPhotosTrail?StartPointId=1&StopPointId=1. 
+Każdy pobrany szlak ma informacje takie jak:
+-mape szlaku
+-szacowana długość spływu
+-szacowany czas spływu
+-dane z najbliższej stacji IMGW(temperatura wody, stan wody, stan ostrzeżenia, stan zagrożenia)
+
+Po wybraniu szlaku przechodzimy do ekranu wyboru dostawców obsługujących dany szlak. Jeżeli ekran szlaków został uruchominy z ekranu dostawców następuje przejście do kalendarzu rezerwacji.
+
